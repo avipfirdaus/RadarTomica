@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "smoke-test": "tsx src/smoke-cli.ts",
     "migrate": "tsx src/db/migrate-cli.ts",
     "seed": "tsx src/db/seed-cli.ts",
     "start": "node dist/main.js",

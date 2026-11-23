@@ -4,6 +4,7 @@ Sistem radar yang memantau rilis Tomica di Jepang dan harga pasar Indonesia, men
 
 - Spesifikasi acuan: [docs/PRD.md](docs/PRD.md)
 - Arsitektur & kontrak modul: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- Panduan pengujian (lokal, LLM eval, staging, pra-rilis): [docs/TESTING.md](docs/TESTING.md)
 - Daftar periksa privasi faceless channel: [src/telegram/CHANNEL_CHECKLIST.md](src/telegram/CHANNEL_CHECKLIST.md)
 
 ## Modul yang Tersedia (Fase 0 + Fase 1)

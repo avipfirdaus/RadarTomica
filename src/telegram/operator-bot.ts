@@ -65,6 +65,8 @@ export interface OperatorControls {
   forceRefetch(sourceId: string, by: string): Promise<{ ok: boolean; message?: string }>;
   recentRuns(limit?: number): Promise<{ runs: RunLogEntry[]; decisions: DecisionLogEntry[] }>;
   listReview(limit?: number): Promise<ReviewEntry[]>;
+  sendSummaryNow?: () => Promise<{ ok: boolean; message?: string }>;
+  createTestDraft?: (by: string) => Promise<{ ok: boolean; draftId?: number; message?: string }>;
 }
 
 export interface DraftActionResult {
@@ -375,6 +377,40 @@ export async function handleUpdate(update: UpdateLike, deps: OperatorRouterDeps)
         return { handled: true, replyText: lines.join('\n') };
       }
 
+      case '/ringkasan': {
+        if (!deps.controls.sendSummaryNow) {
+          return {
+            handled: true,
+            replyText: `[${brand}] Perintah /ringkasan belum aktif pada konfigurasi saat ini.`,
+          };
+        }
+        const res = await deps.controls.sendSummaryNow();
+        return {
+          handled: true,
+          replyText:
+            res.message ??
+            (res.ok ? `[${brand}] Ringkasan harian berhasil dikirim.` : `[${brand}] Gagal mengirim ringkasan harian.`),
+        };
+      }
+
+      case '/testdraf': {
+        if (!deps.controls.createTestDraft) {
+          return {
+            handled: true,
+            replyText: `[${brand}] Perintah /testdraf belum aktif pada konfigurasi saat ini.`,
+          };
+        }
+        const res = await deps.controls.createTestDraft(userId);
+        const defaultOkMsg =
+          res.draftId != null
+            ? `[${brand}] Draf uji #${res.draftId} dibuat untuk pengujian tombol Setuju/Edit/Tolak (tidak langsung diposting ke channel).`
+            : `[${brand}] Draf uji dibuat untuk pengujian tombol Setuju/Edit/Tolak (tidak langsung diposting ke channel).`;
+        return {
+          handled: true,
+          replyText: res.message ?? (res.ok ? defaultOkMsg : `[${brand}] Gagal membuat draf uji.`),
+        };
+      }
+
       case '/bantuan':
       case '/help': {
         const lines = [
@@ -387,6 +423,8 @@ export async function handleUpdate(update: UpdateLike, deps: OperatorRouterDeps)
           '/ambilulang <source_id> — Paksa ambil ulang satu sumber',
           '/log — Lihat log eksekusi dan keputusan terbaru',
           '/review — Lihat daftar item menunggu review',
+          '/ringkasan — Kirim ringkasan harian sekarang ke chat operator',
+          '/testdraf — Buat draf uji staging untuk tes tombol Setuju/Edit/Tolak (tidak langsung ke channel)',
         ];
         return { handled: true, replyText: lines.join('\n') };
       }
