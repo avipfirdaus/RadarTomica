@@ -1,0 +1,146 @@
+[
+  {
+    "id": "16_shop_amazon_first_edition",
+    "category": "shop",
+    "synthetic": true,
+    "sourceUrl": "https://www.amazon.co.jp/dp/B0SYNTH001",
+    "rawText": "タカラトミー トミカ No.88 日産 フェアレディZ NISMO（初回特別仕様）\n価格：￥594（税込）\n発売予定日：2026年12月19日\n現在予約受付中。お一人様1点まで。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 88,
+          "name_ja": "日産 フェアレディZ NISMO",
+          "name_id": null,
+          "edition": "first",
+          "release_date_jst": "2026-12-19",
+          "price_jpy_tax_incl": 594,
+          "replaces": null,
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "トミカ No.88 日産 フェアレディZ NISMO（初回特別仕様）", "source_url": "https://www.amazon.co.jp/dp/B0SYNTH001" },
+            { "field": "edition", "quote_ja": "初回特別仕様", "source_url": "https://www.amazon.co.jp/dp/B0SYNTH001" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "価格：￥594（税込）", "source_url": "https://www.amazon.co.jp/dp/B0SYNTH001" },
+            { "field": "release_date_jst", "quote_ja": "発売予定日：2026年12月19日", "source_url": "https://www.amazon.co.jp/dp/B0SYNTH001" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "17_shop_rakuten_premium",
+    "category": "shop",
+    "synthetic": true,
+    "sourceUrl": "https://item.rakuten.co.jp/synthetic-toyshop/tp-09/",
+    "rawText": "【予約】トミカプレミアム 09 日産 フェアレディZ 300ZX ツインターボ\n販売価格：1,045円（税込）\n発売日：2027年1月16日\n在庫状況：予約受付中",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 9,
+          "name_ja": "日産 フェアレディZ 300ZX ツインターボ",
+          "name_id": null,
+          "edition": "premium",
+          "release_date_jst": "2027-01-16",
+          "price_jpy_tax_incl": 1045,
+          "replaces": null,
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "トミカプレミアム 09 日産 フェアレディZ 300ZX ツインターボ", "source_url": "https://item.rakuten.co.jp/synthetic-toyshop/tp-09/" },
+            { "field": "edition", "quote_ja": "トミカプレミアム 09", "source_url": "https://item.rakuten.co.jp/synthetic-toyshop/tp-09/" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "販売価格：1,045円（税込）", "source_url": "https://item.rakuten.co.jp/synthetic-toyshop/tp-09/" },
+            { "field": "release_date_jst", "quote_ja": "発売日：2027年1月16日", "source_url": "https://item.rakuten.co.jp/synthetic-toyshop/tp-09/" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "18_shop_yodobashi_regular",
+    "category": "shop",
+    "synthetic": true,
+    "sourceUrl": "https://www.yodobashi.com/product/synthetic-1000001/",
+    "rawText": "タカラトミー TAKARATOMY トミカ No.105 スズキ ジムニー ノマド [通常版]\nヨドバシ特価：￥528（税込）\n発売日：2026年12月19日\n予定数の販売を終了しました。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 105,
+          "name_ja": "スズキ ジムニー ノマド",
+          "name_id": null,
+          "edition": "regular",
+          "release_date_jst": "2026-12-19",
+          "price_jpy_tax_incl": 528,
+          "replaces": null,
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "トミカ No.105 スズキ ジムニー ノマド", "source_url": "https://www.yodobashi.com/product/synthetic-1000001/" },
+            { "field": "edition", "quote_ja": "[通常版]", "source_url": "https://www.yodobashi.com/product/synthetic-1000001/" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "ヨドバシ特価：￥528（税込）", "source_url": "https://www.yodobashi.com/product/synthetic-1000001/" },
+            { "field": "release_date_jst", "quote_ja": "発売日：2026年12月19日", "source_url": "https://www.yodobashi.com/product/synthetic-1000001/" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "19_shop_biccamera_kuji",
+    "category": "shop",
+    "synthetic": true,
+    "sourceUrl": "https://www.biccamera.com/bc/item/synthetic-998877/",
+    "rawText": "タカラトミー トミカくじ 2027 新春コレクション（1BOX 12個入・ランダム封入）\nビック特価：9,240円（税込）\n発売日：2027年1月1日\n※中身はランダムのため全種揃わない場合があります。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "トミカくじ 2027 新春コレクション",
+          "name_id": null,
+          "edition": "random",
+          "release_date_jst": "2027-01-01",
+          "price_jpy_tax_incl": 9240,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "トミカくじ 2027 新春コレクション（1BOX 12個入・ランダム封入）", "source_url": "https://www.biccamera.com/bc/item/synthetic-998877/" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "ビック特価：9,240円（税込）", "source_url": "https://www.biccamera.com/bc/item/synthetic-998877/" },
+            { "field": "release_date_jst", "quote_ja": "発売日：2027年1月1日", "source_url": "https://www.biccamera.com/bc/item/synthetic-998877/" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "20_shop_aeon_exclusive",
+    "category": "shop",
+    "synthetic": true,
+    "sourceUrl": "https://aeonretail.com/item/synthetic-tomica-aeon-78/",
+    "rawText": "イオンオリジナル トミカ No.78 トヨタ GRヤリス ラリー1仕様\nイオン店舗・オンラインショップ限定モデル\n本体価格：825円（税込）\n発売日：2027年1月1日",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 78,
+          "name_ja": "イオンオリジナル トミカ No.78 トヨタ GRヤリス ラリー1仕様",
+          "name_id": null,
+          "edition": "exclusive",
+          "release_date_jst": "2027-01-01",
+          "price_jpy_tax_incl": 825,
+          "replaces": null,
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "イオンオリジナル トミカ No.78 トヨタ GRヤリス ラリー1仕様", "source_url": "https://aeonretail.com/item/synthetic-tomica-aeon-78/" },
+            { "field": "edition", "quote_ja": "イオン店舗・オンラインショップ限定モデル", "source_url": "https://aeonretail.com/item/synthetic-tomica-aeon-78/" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "本体価格：825円（税込）", "source_url": "https://aeonretail.com/item/synthetic-tomica-aeon-78/" },
+            { "field": "release_date_jst", "quote_ja": "発売日：2027年1月1日", "source_url": "https://aeonretail.com/item/synthetic-tomica-aeon-78/" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  }
+]

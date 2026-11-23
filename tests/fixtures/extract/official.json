@@ -1,0 +1,303 @@
+[
+  {
+    "id": "01_official_regular_no94",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://www.takaratomy.co.jp/products/tomica/new/2604.htm",
+    "rawText": "トミカ 2026年4月新車ラインナップ（第3土曜日発売）\nNo.94 光岡 M55\n発売日：2026年4月18日\nメーカー希望小売価格：594円（税込）\n※No.94 日産 セレナと入れ替えになります。\n通常仕様のみの発売です。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 94,
+          "name_ja": "光岡 M55",
+          "name_id": null,
+          "edition": "regular",
+          "release_date_jst": "2026-04-18",
+          "price_jpy_tax_incl": 594,
+          "replaces": "日産 セレナ",
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "No.94 光岡 M55", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2604.htm" },
+            { "field": "release_date_jst", "quote_ja": "発売日：2026年4月18日", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2604.htm" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "メーカー希望小売価格：594円（税込）", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2604.htm" },
+            { "field": "edition", "quote_ja": "通常仕様のみの発売です。", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2604.htm" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "02_official_first_edition_no36",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://www.takaratomy.co.jp/products/tomica/new/2612.htm",
+    "rawText": "2026年12月 トミカ新車情報\nNo.36 ホンダ プレリュード（初回特別仕様）\n発売日：2026年12月19日（第3土曜日）\n希望小売価格：594円（税込）\nボディカラーは初回特別仕様限定のパールホワイトを採用。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 36,
+          "name_ja": "ホンダ プレリュード",
+          "name_id": null,
+          "edition": "first",
+          "release_date_jst": "2026-12-19",
+          "price_jpy_tax_incl": 594,
+          "replaces": null,
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "No.36 ホンダ プレリュード（初回特別仕様）", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2612.htm" },
+            { "field": "edition", "quote_ja": "初回特別仕様", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2612.htm" },
+            { "field": "release_date_jst", "quote_ja": "発売日：2026年12月19日（第3土曜日）", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2612.htm" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "希望小売価格：594円（税込）", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2612.htm" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "03_official_premium_no21",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://www.takaratomy.co.jp/products/tomica/tomica_premium/2612.htm",
+    "rawText": "トミカプレミアム 2026年12月発売モデル\nNo.21 トヨタ ソアラ 2800GT-EXTRA\nシリーズ：トミカプレミアム\n発売予定日：2026年12月19日\nメーカー希望小売価格：1,100円（税込）\nサスペンション・左右ドア開閉ギミック搭載。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 21,
+          "name_ja": "トヨタ ソアラ 2800GT-EXTRA",
+          "name_id": null,
+          "edition": "premium",
+          "release_date_jst": "2026-12-19",
+          "price_jpy_tax_incl": 1100,
+          "replaces": null,
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "No.21 トヨタ ソアラ 2800GT-EXTRA", "source_url": "https://www.takaratomy.co.jp/products/tomica/tomica_premium/2612.htm" },
+            { "field": "edition", "quote_ja": "シリーズ：トミカプレミアム", "source_url": "https://www.takaratomy.co.jp/products/tomica/tomica_premium/2612.htm" },
+            { "field": "release_date_jst", "quote_ja": "発売予定日：2026年12月19日", "source_url": "https://www.takaratomy.co.jp/products/tomica/tomica_premium/2612.htm" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "メーカー希望小売価格：1,100円（税込）", "source_url": "https://www.takaratomy.co.jp/products/tomica/tomica_premium/2612.htm" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "04_official_premium_unlimited",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://www.takaratomy.co.jp/products/tomica/tomica_premium/unlimited/2701.htm",
+    "rawText": "トミカプレミアムunlimited 新製品のご案内\n商品名：トミカプレミアムunlimited 頭文字D AE86 トレノ（藤原拓海）\n発売日：2027年1月16日\n価格：1,320円（税込）\n専用パッケージ仕様。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "トミカプレミアムunlimited 頭文字D AE86 トレノ（藤原拓海）",
+          "name_id": null,
+          "edition": "premium_unlimited",
+          "release_date_jst": "2027-01-16",
+          "price_jpy_tax_incl": 1320,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "トミカプレミアムunlimited 頭文字D AE86 トレノ（藤原拓海）", "source_url": "https://www.takaratomy.co.jp/products/tomica/tomica_premium/unlimited/2701.htm" },
+            { "field": "release_date_jst", "quote_ja": "発売日：2027年1月16日", "source_url": "https://www.takaratomy.co.jp/products/tomica/tomica_premium/unlimited/2701.htm" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "価格：1,320円（税込）", "source_url": "https://www.takaratomy.co.jp/products/tomica/tomica_premium/unlimited/2701.htm" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "05_official_dream_tomica_collab",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://www.takaratomy.co.jp/products/tomica/dream/2612.htm",
+    "rawText": "ドリームトミカ コラボレーション新商品\n商品名：ドリームトミカ SP ちいかわ ハチワレカー\n発売予定日：2026年12月19日\nメーカー希望小売価格：880円（税込）",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "ドリームトミカ SP ちいかわ ハチワレカー",
+          "name_id": null,
+          "edition": "collab",
+          "release_date_jst": "2026-12-19",
+          "price_jpy_tax_incl": 880,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "ドリームトミカ コラボレーション新商品", "source_url": "https://www.takaratomy.co.jp/products/tomica/dream/2612.htm" },
+            { "field": "release_date_jst", "quote_ja": "発売予定日：2026年12月19日", "source_url": "https://www.takaratomy.co.jp/products/tomica/dream/2612.htm" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "メーカー希望小売価格：880円（税込）", "source_url": "https://www.takaratomy.co.jp/products/tomica/dream/2612.htm" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "06_official_new_year_random",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://www.takaratomy.co.jp/product_release/pdf/p261215.pdf",
+    "rawText": "ニュースリリース（タカラトミー）\n新春シリーズ「福舞トミカ」全6種を2026年12月26日より発売！\n何が出るかお楽しみのブラインドパッケージ仕様。\n希望小売価格：各770円（税込）\n※ランダム封入のため車種は選べません。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "福舞トミカ",
+          "name_id": null,
+          "edition": "random",
+          "release_date_jst": "2026-12-26",
+          "price_jpy_tax_incl": 770,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "何が出るかお楽しみのブラインドパッケージ仕様。", "source_url": "https://www.takaratomy.co.jp/product_release/pdf/p261215.pdf" },
+            { "field": "release_date_jst", "quote_ja": "2026年12月26日より発売！", "source_url": "https://www.takaratomy.co.jp/product_release/pdf/p261215.pdf" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "希望小売価格：各770円（税込）", "source_url": "https://www.takaratomy.co.jp/product_release/pdf/p261215.pdf" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "07_official_gift_set",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://www.takaratomy.co.jp/products/tomica/gift/2612.htm",
+    "rawText": "トミカギフト 2026年12月新商品\n商品名：緊急車両コレクション 4台セット\n発売日：2026年12月19日\nメーカー希望小売価格：2,420円（税込）\nパトロールカー・消防車・救急車・指揮車のギフトセットです。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "緊急車両コレクション 4台セット",
+          "name_id": null,
+          "edition": "set",
+          "release_date_jst": "2026-12-19",
+          "price_jpy_tax_incl": 2420,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "トミカギフト 2026年12月新商品", "source_url": "https://www.takaratomy.co.jp/products/tomica/gift/2612.htm" },
+            { "field": "release_date_jst", "quote_ja": "発売日：2026年12月19日", "source_url": "https://www.takaratomy.co.jp/products/tomica/gift/2612.htm" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "メーカー希望小売価格：2,420円（税込）", "source_url": "https://www.takaratomy.co.jp/products/tomica/gift/2612.htm" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "08_official_mall_exclusive",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://takaratomymall.jp/shop/g/g4904810999991/",
+    "rawText": "タカラトミーモールオリジナル トミカプレミアム 日産 スカイライン GT-R（BNR34）ミッドナイトパープル\n予約開始：2026年11月30日\n発売日：2027年1月16日\n販売価格：1,100円（税込）\n※タカラトミーモール限定販売商品です。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "タカラトミーモールオリジナル トミカプレミアム 日産 スカイライン GT-R（BNR34）ミッドナイトパープル",
+          "name_id": null,
+          "edition": "exclusive",
+          "release_date_jst": "2027-01-16",
+          "price_jpy_tax_incl": 1100,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "※タカラトミーモール限定販売商品です。", "source_url": "https://takaratomymall.jp/shop/g/g4904810999991/" },
+            { "field": "release_date_jst", "quote_ja": "発売日：2027年1月16日", "source_url": "https://takaratomymall.jp/shop/g/g4904810999991/" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "販売価格：1,100円（税込）", "source_url": "https://takaratomymall.jp/shop/g/g4904810999991/" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "09_official_en_press_release",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://www.takaratomy.co.jp/english/product_release/pdf/p261201_en.pdf",
+    "rawText": "TAKARA TOMY Press Release\nNew tomica PREMIUM Launch: Mazda RX-7 (FD3S) Spirit R\nProduct Series: tomica PREMIUM\nRelease Date (Japan): January 16, 2027\nSuggested Retail Price: 1,100 yen (tax included)\nAvailable at toy stores nationwide in Japan.",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "Mazda RX-7 (FD3S) Spirit R",
+          "name_id": null,
+          "edition": "premium",
+          "release_date_jst": "2027-01-16",
+          "price_jpy_tax_incl": 1100,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "Product Series: tomica PREMIUM", "source_url": "https://www.takaratomy.co.jp/english/product_release/pdf/p261201_en.pdf" },
+            { "field": "release_date_jst", "quote_ja": "Release Date (Japan): January 16, 2027", "source_url": "https://www.takaratomy.co.jp/english/product_release/pdf/p261201_en.pdf" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "Suggested Retail Price: 1,100 yen (tax included)", "source_url": "https://www.takaratomy.co.jp/english/product_release/pdf/p261201_en.pdf" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "10_official_multi_item_lineup",
+    "category": "official",
+    "synthetic": true,
+    "sourceUrl": "https://www.takaratomy.co.jp/products/tomica/new/2701.htm",
+    "rawText": "2027年1月16日（第3土曜日）発売 トミカ新車\n1) No.17 トヨタ ランドクルーザー 250（通常版） 価格：594円（税込）\n2) No.17 トヨタ ランドクルーザー 250（初回特別仕様） 価格：594円（税込）\n※No.17 フェラーリ ローマと入れ替え。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 17,
+          "name_ja": "トヨタ ランドクルーザー 250",
+          "name_id": null,
+          "edition": "regular",
+          "release_date_jst": "2027-01-16",
+          "price_jpy_tax_incl": 594,
+          "replaces": "フェラーリ ローマ",
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "No.17 トヨタ ランドクルーザー 250（通常版）", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2701.htm" },
+            { "field": "edition", "quote_ja": "通常版", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2701.htm" },
+            { "field": "release_date_jst", "quote_ja": "2027年1月16日（第3土曜日）発売", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2701.htm" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "価格：594円（税込）", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2701.htm" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        },
+        {
+          "tomica_no": 17,
+          "name_ja": "トヨタ ランドクルーザー 250",
+          "name_id": null,
+          "edition": "first",
+          "release_date_jst": "2027-01-16",
+          "price_jpy_tax_incl": 594,
+          "replaces": "フェラーリ ローマ",
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "No.17 トヨタ ランドクルーザー 250（初回特別仕様）", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2701.htm" },
+            { "field": "edition", "quote_ja": "初回特別仕様", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2701.htm" },
+            { "field": "release_date_jst", "quote_ja": "2027年1月16日（第3土曜日）発売", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2701.htm" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "価格：594円（税込）", "source_url": "https://www.takaratomy.co.jp/products/tomica/new/2701.htm" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  }
+]

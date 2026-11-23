@@ -1,0 +1,42 @@
+{
+  "name": "radar-tomica",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Radar Tomica Jepang — pemantau rilis Tomica & kelayakan PO (lihat docs/PRD.md)",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "migrate": "tsx src/db/migrate-cli.ts",
+    "seed": "tsx src/db/seed-cli.ts",
+    "start": "node dist/main.js",
+    "dev": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0",
+    "cheerio": "^1.2.0",
+    "croner": "^11.0.1",
+    "dotenv": "^18.0.10",
+    "grammy": "^1.48.0",
+    "luxon": "^3.7.2",
+    "pg": "^8.23.1",
+    "pino": "^10.4.0",
+    "robots-parser": "^3.1.1",
+    "unpdf": "^1.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.6.0",
+    "@types/luxon": "^3.7.6",
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}
