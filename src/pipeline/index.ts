@@ -386,6 +386,54 @@ export function createOperatorControls(deps: PipelineDeps): OperatorControls {
       );
       return rows;
     },
+
+    async sendSummaryNow(): Promise<{ ok: boolean; message?: string }> {
+      const now = deps.now ?? (() => new Date());
+      await sendDailySummary(deps.db, deps.telegram, now(), { brandName: deps.env.BRAND_NAME });
+      return { ok: true, message: 'Ringkasan harian berhasil dikirim.' };
+    },
+
+    async createTestDraft(): Promise<{ ok: boolean; draftId?: number; message?: string }> {
+      const draftDeps = createDraftServiceDeps(deps);
+      const draft = await createDraft(draftDeps, {
+        kind: 'po_open',
+        itemIds: [],
+        useP4: false,
+        data: {
+          brandName: `${deps.env.BRAND_NAME} [UJI STAGING]`,
+          items: [
+            {
+              tomicaNo: 94,
+              nameJa: '光岡 M55 [UJI STAGING]',
+              nameId: 'Mitsuoka M55 (Contoh Uji Staging)',
+              edition: 'first',
+              releaseDateJst: '2026-12-19',
+              priceJpy: 594,
+              poPriceIdr: 156942,
+              referenceIdr: 253462,
+              poRatio: 1.61,
+              sourceUrl: 'https://www.takaratomy.co.jp/products/tomica/',
+            },
+          ],
+          poTerms: {
+            dpPercent: 50,
+            deadline: 'Contoh tenggat uji staging (JST / WIB)',
+            contactMethod: `Contoh cara pesan — ${deps.env.BRAND_NAME} (UJI STAGING)`,
+          },
+          sources: [
+            {
+              claim: 'Data contoh uji staging (bukan rilis aktual)',
+              url: 'https://www.takaratomy.co.jp/products/tomica/',
+            },
+          ],
+        },
+      });
+      return {
+        ok: true,
+        draftId: draft.id,
+        message: `Draf uji staging #${draft.id} dikirim untuk review (Setuju / Edit / Tolak).`,
+      };
+    },
   };
 }
 

@@ -211,4 +211,73 @@ describe('Operator bot security & commands', () => {
     expect(badVal.replyText).toContain('harus berupa angka');
     expect(controls.setParam).not.toHaveBeenCalled();
   });
+
+  it('dispatches /ringkasan and /testdraf for operator and ignores them for non-operator', async () => {
+    const sendSummaryNow = vi.fn(async () => ({ ok: true, message: 'Ringkasan terkirim.' }));
+    const createTestDraft = vi.fn(async () => ({ ok: true, draftId: 123 }));
+    const controls: OperatorControls = {
+      ...createMockControls(),
+      sendSummaryNow,
+      createTestDraft,
+    };
+    const deps = { operatorChatId: OPERATOR_ID, controls };
+
+    // Non-operator harus diabaikan
+    const nonOpSummary = await handleUpdate(
+      { message: { from: { id: '9999999' }, chat: { id: '9999999' }, text: '/ringkasan' } },
+      deps,
+    );
+    expect(nonOpSummary.unauthorized).toBe(true);
+    expect(nonOpSummary.handled).toBe(false);
+    expect(sendSummaryNow).not.toHaveBeenCalled();
+
+    const nonOpDraft = await handleUpdate(
+      { message: { from: { id: '9999999' }, chat: { id: '9999999' }, text: '/testdraf' } },
+      deps,
+    );
+    expect(nonOpDraft.unauthorized).toBe(true);
+    expect(nonOpDraft.handled).toBe(false);
+    expect(createTestDraft).not.toHaveBeenCalled();
+
+    // Operator diizinkan
+    const opSummary = await handleUpdate(
+      { message: { from: { id: OPERATOR_ID }, chat: { id: OPERATOR_ID }, text: '/ringkasan' } },
+      deps,
+    );
+    expect(opSummary.handled).toBe(true);
+    expect(sendSummaryNow).toHaveBeenCalledTimes(1);
+    expect(opSummary.replyText).toContain('Ringkasan terkirim.');
+
+    const opDraft = await handleUpdate(
+      { message: { from: { id: OPERATOR_ID }, chat: { id: OPERATOR_ID }, text: '/testdraf' } },
+      deps,
+    );
+    expect(opDraft.handled).toBe(true);
+    expect(createTestDraft).toHaveBeenCalledWith(OPERATOR_ID);
+    expect(opDraft.replyText).toContain('#123');
+
+    // /bantuan mencantumkan /ringkasan dan /testdraf
+    const helpRes = await handleUpdate(
+      { message: { from: { id: OPERATOR_ID }, chat: { id: OPERATOR_ID }, text: '/bantuan' } },
+      deps,
+    );
+    expect(helpRes.replyText).toContain('/ringkasan');
+    expect(helpRes.replyText).toContain('/testdraf');
+  });
+
+  it('replies clearly when /ringkasan or /testdraf is not configured', async () => {
+    const controls = createMockControls();
+    const deps = { operatorChatId: OPERATOR_ID, controls };
+    const msg = (text: string) => ({
+      message: { from: { id: OPERATOR_ID }, chat: { id: OPERATOR_ID }, text },
+    });
+
+    const summaryRes = await handleUpdate(msg('/ringkasan'), deps);
+    expect(summaryRes.handled).toBe(true);
+    expect(summaryRes.replyText).toContain('belum aktif');
+
+    const draftRes = await handleUpdate(msg('/testdraf'), deps);
+    expect(draftRes.handled).toBe(true);
+    expect(draftRes.replyText).toContain('belum aktif');
+  });
 });
