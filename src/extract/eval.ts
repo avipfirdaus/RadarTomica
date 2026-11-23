@@ -10,7 +10,7 @@ import { readFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { P1OutputSchema, type ExtractedItem, type LlmClient, type P1Output } from '../shared/types.js';
-import { AnthropicLlmClient } from './llm/anthropic.js';
+import { createLlmClient } from './llm/index.js';
 import { MockLlmClient } from './llm/mock.js';
 import { buildP1Prompt } from './prompts/p1.js';
 import { parseJsonFromLlm } from './json.js';
@@ -112,15 +112,19 @@ export async function runEval(opts?: {
   fixturesDir?: string;
 }): Promise<EvalSummary> {
   const fixtures = await loadExtractFixtures(opts?.fixturesDir);
+  const hasLiveCreds =
+    process.env.LLM_PROVIDER === 'openai_compat'
+      ? Boolean(process.env.LLM_BASE_URL)
+      : Boolean(process.env.ANTHROPIC_API_KEY);
   const useLive =
     opts?.mode === 'live' ||
-    (!opts?.mode && Boolean(process.env.ANTHROPIC_API_KEY) && process.env.LLM_MOCK !== '1');
+    (!opts?.mode && hasLiveCreds && process.env.LLM_MOCK !== '1');
 
   const mode: 'live' | 'mock' = useLive ? 'live' : 'mock';
   const llm: LlmClient =
     opts?.llm ??
     (useLive
-      ? new AnthropicLlmClient()
+      ? createLlmClient({ mock: false })
       : new MockLlmClient({
           matchers: fixtures.map((f) => ({
             match: (req) => req.user.includes(f.sourceUrl),

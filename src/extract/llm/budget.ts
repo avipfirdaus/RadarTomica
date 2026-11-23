@@ -31,12 +31,17 @@ const MODEL_PRICING_PER_MILLION: Record<string, { input: number; output: number 
   'claude-haiku-4-5': { input: 1, output: 5 },
   'claude-3-5-haiku': { input: 0.8, output: 4 },
   'claude-opus-4': { input: 15, output: 75 },
+  'gemini-2.5-flash': { input: 0.15, output: 0.6 },
+  'gemini-2.0-flash': { input: 0.1, output: 0.4 },
 };
 
 const DEFAULT_PRICING = { input: 3, output: 15 };
 
 export function estimateCostUsd(model: string, inputTokens: number, outputTokens: number): number {
   const lower = model.toLowerCase();
+  if (lower.endsWith(':free') || lower.includes(':free')) {
+    return 0;
+  }
   let pricing = DEFAULT_PRICING;
   for (const [prefix, rates] of Object.entries(MODEL_PRICING_PER_MILLION)) {
     if (lower.startsWith(prefix) || lower.includes(prefix)) {

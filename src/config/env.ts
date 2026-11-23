@@ -11,7 +11,10 @@ const EnvSchema = z.object({
   DATABASE_URL: z.string().default('postgres://radar:radar@localhost:5432/radar'),
   BRAND_NAME: z.string().default('Radar Tomica Jepang'),
 
+  LLM_PROVIDER: z.enum(['anthropic', 'openai_compat']).default('anthropic'),
   ANTHROPIC_API_KEY: z.string().optional(),
+  LLM_BASE_URL: z.string().optional(),
+  LLM_API_KEY: z.string().optional(),
   LLM_MODEL: z.string().default('claude-sonnet-4-5'),
   LLM_MOCK: bool,
   LLM_MONTHLY_BUDGET_USD: z.coerce.number().default(20),

@@ -25,9 +25,17 @@ async function main() {
   const seeded = await seedSources(db);
   logger.info({ seeded, mockLlm: env.LLM_MOCK, dryRunTelegram: env.TELEGRAM_DRY_RUN }, 'Radar Tomica dimulai');
 
+  const hasLiveLlmCreds =
+    env.LLM_PROVIDER === 'openai_compat'
+      ? Boolean(env.LLM_BASE_URL)
+      : Boolean(env.ANTHROPIC_API_KEY);
+
   const llm = createLlmClient({
     db,
-    mock: env.LLM_MOCK || !env.ANTHROPIC_API_KEY,
+    mock: env.LLM_MOCK || !hasLiveLlmCreds,
+    provider: env.LLM_PROVIDER,
+    baseUrl: env.LLM_BASE_URL,
+    apiKey: env.LLM_PROVIDER === 'openai_compat' ? env.LLM_API_KEY : env.ANTHROPIC_API_KEY,
     model: env.LLM_MODEL,
     monthlyBudgetUsd: env.LLM_MONTHLY_BUDGET_USD,
   });
