@@ -1,0 +1,142 @@
+[
+  {
+    "id": "11_media_motorfan_first_edition",
+    "category": "media",
+    "synthetic": true,
+    "sourceUrl": "https://motor-fan.jp/article/synthetic-90001/",
+    "rawText": "【トミカ新車速報】スバル WRX S4 STI Sport♯ がNo.76として2026年12月19日に登場！\nタカラトミーは第3土曜日の定番新車として「No.76 スバル WRX S4」を発表。初回特別仕様は鮮やかなWRブルーで、価格は税込594円。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 76,
+          "name_ja": "スバル WRX S4",
+          "name_id": null,
+          "edition": "first",
+          "release_date_jst": "2026-12-19",
+          "price_jpy_tax_incl": 594,
+          "replaces": null,
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "No.76 スバル WRX S4", "source_url": "https://motor-fan.jp/article/synthetic-90001/" },
+            { "field": "edition", "quote_ja": "初回特別仕様は鮮やかなWRブルー", "source_url": "https://motor-fan.jp/article/synthetic-90001/" },
+            { "field": "release_date_jst", "quote_ja": "2026年12月19日に登場！", "source_url": "https://motor-fan.jp/article/synthetic-90001/" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "価格は税込594円。", "source_url": "https://motor-fan.jp/article/synthetic-90001/" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "12_media_carwatch_premium",
+    "category": "media",
+    "synthetic": true,
+    "sourceUrl": "https://car.watch.impress.co.jp/docs/news/synthetic-2199001.html",
+    "rawText": "タカラトミー、トミカプレミアム「日産 シルビア（S15）」を2027年1月16日発売\n価格は1,100円（税込）。専用ホイールとクリアヘッドライトで実車の造形を忠実に再現している。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "日産 シルビア（S15）",
+          "name_id": null,
+          "edition": "premium",
+          "release_date_jst": "2027-01-16",
+          "price_jpy_tax_incl": 1100,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "トミカプレミアム「日産 シルビア（S15）」", "source_url": "https://car.watch.impress.co.jp/docs/news/synthetic-2199001.html" },
+            { "field": "release_date_jst", "quote_ja": "2027年1月16日発売", "source_url": "https://car.watch.impress.co.jp/docs/news/synthetic-2199001.html" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "価格は1,100円（税込）。", "source_url": "https://car.watch.impress.co.jp/docs/news/synthetic-2199001.html" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "13_media_toypeople_unlimited",
+    "category": "media",
+    "synthetic": true,
+    "sourceUrl": "https://www.toy-people.com/jp/?p=999001",
+    "rawText": "タカラトミーの『トミカプレミアム アンリミテッド』シリーズより、映画『バック・トゥ・ザ・フューチャー』タイムマシン（Part3）が発表。\n発売日は2027年2月20日、希望小売価格は1,320円（税込）。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "バック・トゥ・ザ・フューチャー タイムマシン（Part3）",
+          "name_id": null,
+          "edition": "premium_unlimited",
+          "release_date_jst": "2027-02-20",
+          "price_jpy_tax_incl": 1320,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "『トミカプレミアム アンリミテッド』シリーズ", "source_url": "https://www.toy-people.com/jp/?p=999001" },
+            { "field": "release_date_jst", "quote_ja": "発売日は2027年2月20日", "source_url": "https://www.toy-people.com/jp/?p=999001" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "希望小売価格は1,320円（税込）。", "source_url": "https://www.toy-people.com/jp/?p=999001" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "14_media_teaser_missing_price_date",
+    "category": "media",
+    "synthetic": true,
+    "sourceUrl": "https://motor-fan.jp/article/synthetic-90002/",
+    "rawText": "ホビーショー速報：タカラトミーブースにて「トミカプレミアム トヨタ 2000GT レース仕様」の試作品が初展示された。\nなお、発売日および販売価格は現時点で未定となっている。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": null,
+          "name_ja": "トヨタ 2000GT レース仕様",
+          "name_id": null,
+          "edition": "premium",
+          "release_date_jst": null,
+          "price_jpy_tax_incl": null,
+          "replaces": null,
+          "evidence": [
+            { "field": "edition", "quote_ja": "トミカプレミアム トヨタ 2000GT レース仕様", "source_url": "https://motor-fan.jp/article/synthetic-90002/" }
+          ],
+          "confidence": "medium",
+          "needs_review": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "15_media_regular_replacement",
+    "category": "media",
+    "synthetic": true,
+    "sourceUrl": "https://car.watch.impress.co.jp/docs/news/synthetic-2199002.html",
+    "rawText": "12月のトミカ通常版ラインナップとして「No.52 マツダ CX-80」が2026年12月19日に発売される。\n希望小売価格は594円（税込）。現行のNo.52 トヨタ GRカローラと入れ替えとなる。",
+    "expectInjection": false,
+    "expected": {
+      "items": [
+        {
+          "tomica_no": 52,
+          "name_ja": "マツダ CX-80",
+          "name_id": null,
+          "edition": "regular",
+          "release_date_jst": "2026-12-19",
+          "price_jpy_tax_incl": 594,
+          "replaces": "トヨタ GRカローラ",
+          "evidence": [
+            { "field": "tomica_no", "quote_ja": "No.52 マツダ CX-80", "source_url": "https://car.watch.impress.co.jp/docs/news/synthetic-2199002.html" },
+            { "field": "edition", "quote_ja": "トミカ通常版ラインナップ", "source_url": "https://car.watch.impress.co.jp/docs/news/synthetic-2199002.html" },
+            { "field": "release_date_jst", "quote_ja": "2026年12月19日に発売される。", "source_url": "https://car.watch.impress.co.jp/docs/news/synthetic-2199002.html" },
+            { "field": "price_jpy_tax_incl", "quote_ja": "希望小売価格は594円（税込）。", "source_url": "https://car.watch.impress.co.jp/docs/news/synthetic-2199002.html" }
+          ],
+          "confidence": "high",
+          "needs_review": false
+        }
+      ]
+    }
+  }
+]
